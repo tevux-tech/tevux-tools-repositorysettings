@@ -91,7 +91,7 @@ class Build : NukeBuild {
        });
 
     Target Tag => _ => _
-       .DependsOn(Push)
+       .DependsOn(Pack)
        .Executes(() => {
            Git($"tag {NextPackageVersion}");
        });
@@ -99,8 +99,8 @@ class Build : NukeBuild {
     Target Commit => _ => _
        .DependsOn(Tag)
        .Executes(() => {
-           Git($"add .");
-           Git($"commit -m \"Releasing {NextPackageVersion}.\"");
+           Git($"add .", workingDirectory: RootDirectory);
+           Git($"commit -m \"Releasing {NextPackageVersion}.\"", workingDirectory: RootDirectory);
        });
 
     Target Finalize => _ => _
