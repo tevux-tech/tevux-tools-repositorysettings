@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>Tevux.Tools.RepositorySettings</id>
-		<version>0.2.0-preview.2</version>
+		<version>0.2.0</version>
 		<title>Tevux.Tools.RepositorySettings</title>
 		<authors>Tevux Technologies</authors>
 		<description>Provides base repository settings files that fits Tevux Technologies style.</description>
