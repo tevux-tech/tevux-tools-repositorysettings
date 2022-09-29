@@ -90,21 +90,21 @@ class Build : NukeBuild {
 
        });
 
-    Target Tag => _ => _
-       .DependsOn(PushTevuxTech)
-       .Executes(() => {
-           Git($"tag Versions/{NextPackageVersion}");
-       });
-
     Target Commit => _ => _
-       .DependsOn(Tag)
+       .DependsOn(PushTevuxTech)
        .Executes(() => {
            Git($"add .", workingDirectory: RootDirectory);
            Git($"commit -m \"Releasing {NextPackageVersion}.\"", workingDirectory: RootDirectory);
        });
 
-    Target Finalize => _ => _
+    Target Tag => _ => _
        .DependsOn(Commit)
+       .Executes(() => {
+           Git($"tag Versions/{NextPackageVersion}");
+       });
+
+    Target Finalize => _ => _
+       .DependsOn(Tag)
        .Executes(() => {
 
        });
