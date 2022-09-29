@@ -18,7 +18,7 @@ using Semver;
 
 class Build : NukeBuild {
 
-    public static int Main() => Execute<Build>(x => x.Tag);
+    public static int Main() => Execute<Build>(x => x.Finalize);
 
     SemVersion CurrentPackageVersion { get; set; }
     SemVersion NextPackageVersion { get; set; }
@@ -93,7 +93,20 @@ class Build : NukeBuild {
     Target Tag => _ => _
        .DependsOn(Push)
        .Executes(() => {
-           Git($"tag {CurrentPackageVersion}");
+           Git($"tag {NextPackageVersion}");
+       });
+
+    Target Commit => _ => _
+       .DependsOn(Tag)
+       .Executes(() => {
+           Git($"add .");
+           Git($"commit -m \"Releasing {NextPackageVersion}.\"");
+       });
+
+    Target Finalize => _ => _
+       .DependsOn(Commit)
+       .Executes(() => {
+
        });
 
 
