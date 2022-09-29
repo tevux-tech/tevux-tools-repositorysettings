@@ -79,7 +79,7 @@ class Build : NukeBuild {
             ReportSummary(_ => _.AddPair("Packages", OutputDirectory.GlobFiles("*.nupkg").Count.ToString()));
         });
 
-    Target Push => _ => _
+    Target PushTevuxTech => _ => _
        .DependsOn(Pack)
        .Executes(() => {
            var apiKey = Environment.GetEnvironmentVariable("GithubTevuxPackages");
@@ -91,7 +91,7 @@ class Build : NukeBuild {
        });
 
     Target Tag => _ => _
-       .DependsOn(Pack)
+       .DependsOn(PushTevuxTech)
        .Executes(() => {
            Git($"tag Versions/{NextPackageVersion}");
        });
