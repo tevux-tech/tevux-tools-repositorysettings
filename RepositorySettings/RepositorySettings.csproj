@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="tevux.tools.editorconfig.props" Pack="true" PackagePath="\build" />
     <Content Include=".editorconfig" Pack="true" PackagePath="\content"></Content>
     <Content Include="Settings.XamlStyler" Pack="true" PackagePath="\content"></Content>
     <Content Include=".gitattributes" Pack="true" PackagePath="\content"></Content>
