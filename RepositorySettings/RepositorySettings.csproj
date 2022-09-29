@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <PackageId>Tevux.Tools.RepositorySettings</PackageId>
     <Title>Base .editorconfig and .gitignore files</Title>
-    <Version>0.10.0</Version>
+    <Version>0.10.0-preview.1</Version>
     <Company>Tevux Technologies</Company>
     <Authors>Tevux Technologies</Authors>
     <Product>Tevux.Tools.RepositorySettings</Product>
@@ -17,6 +17,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <NoDefaultExcludes>true</NoDefaultExcludes>
+    <IncludeBuiltProjectOutputGroup>false</IncludeBuiltProjectOutputGroup>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="tevux.tools.editorconfig.props" Pack="true" PackagePath="\build" />
     <Content Include=".editorconfig" Pack="true" PackagePath="\content"></Content>
     <Content Include="Settings.XamlStyler" Pack="true" PackagePath="\content"></Content>
     <Content Include=".gitattributes" Pack="true" PackagePath="\content"></Content>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>Tevux.Tools.RepositorySettings</id>
+		<version>0.1.0-preview.8</version>
+		<title>Tevux.Tools.RepositorySettings</title>
+		<authors>Tevux Technologies</authors>
+		<description>Provides base repository settings files that fits Tevux Technologies style.</description>
+		<copyright>© 2022 Tevux Technologies</copyright>
+		<license type="expression">MIT</license>
+		<requireLicenseAcceptance>true</requireLicenseAcceptance>
+		<repository type="git" url="https://github.com/tevux-tech/tevux-tools-repositorysettings" />
+		<tags>csharp;editorconfig;codestyle</tags>
+		<developmentDependency>true</developmentDependency>
+	</metadata>
+	<files>
+		<file src="Tevux.Tools.RepositorySettings.props" target="build" />
+		<file src=".editorconfig" target="content" />
+		<file src=".gitattributes" target="content" />
+		<file src=".gitignore" target="content" />
+		<file src="Settings.XamlStyler" target="content" />
+	</files>
+</package>
