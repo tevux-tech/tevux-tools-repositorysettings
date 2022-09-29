@@ -1,4 +1,4 @@
-# devbotas settings 2.0
+# devbotas settings 2.1
 
 root = true
 file_header_template = unset
@@ -32,9 +32,9 @@ csharp_indent_labels = one_less_than_current
 
 # New line preferences
 csharp_new_line_before_open_brace = none # Note: this line overrides a bunch of specific settings. VS 2022 shows them all, but you can't select them if this line is present...
-csharp_new_line_before_catch = true
-csharp_new_line_before_else = true
-csharp_new_line_before_finally = true
+csharp_new_line_before_catch = false
+csharp_new_line_before_else = false
+csharp_new_line_before_finally = false
 csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
