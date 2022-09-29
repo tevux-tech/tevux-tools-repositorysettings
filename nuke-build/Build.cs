@@ -93,7 +93,7 @@ class Build : NukeBuild {
     Target Tag => _ => _
        .DependsOn(Pack)
        .Executes(() => {
-           Git($"tag {NextPackageVersion}");
+           Git($"tag Versions/{NextPackageVersion}");
        });
 
     Target Commit => _ => _
