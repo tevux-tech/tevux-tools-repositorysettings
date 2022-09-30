@@ -89,9 +89,19 @@ class Build : NukeBuild {
                .CombineWith(OutputDirectory.GlobFiles("*.nupkg").NotEmpty(), (_, v) => _.SetTargetPath(v)));
 
        });
+    Target PushNugetOrg => _ => _
+       .DependsOn(Pack)
+       .Executes(() => {
+           var apiKey = Environment.GetEnvironmentVariable("NUGET_API_KEY");
+           DotNetNuGetPush(_ => _
+               .SetSource("https://api.nuget.org/v3/index.json")
+               .SetApiKey(apiKey)
+               .CombineWith(OutputDirectory.GlobFiles("*.nupkg").NotEmpty(), (_, v) => _.SetTargetPath(v)));
+
+       });
 
     Target Commit => _ => _
-       .DependsOn(PushTevuxTech)
+       .DependsOn(PushNugetOrg)
        .Executes(() => {
            Git($"add .", workingDirectory: RootDirectory);
            Git($"commit -m \"Releasing {NextPackageVersion}.\"", workingDirectory: RootDirectory);
