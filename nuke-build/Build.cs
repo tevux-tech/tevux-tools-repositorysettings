@@ -101,7 +101,7 @@ class Build : NukeBuild {
        });
 
     Target Commit => _ => _
-       .DependsOn(PushNugetOrg)
+       .DependsOn(PushTevuxTech, PushNugetOrg)
        .Executes(() => {
            Git($"add .", workingDirectory: RootDirectory);
            Git($"commit -m \"Releasing {NextPackageVersion}.\"", workingDirectory: RootDirectory);
