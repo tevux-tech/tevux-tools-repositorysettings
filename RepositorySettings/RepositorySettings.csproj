@@ -4,18 +4,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>Tevux.Tools.RepositorySettings</PackageId>
-    <Title>Base .editorconfig and .gitignore files</Title>
-    <Version>0.10.0-preview.1</Version>
-    <Company>Tevux Technologies</Company>
-    <Authors>Tevux Technologies</Authors>
-    <Product>Tevux.Tools.RepositorySettings</Product>
-    <Description>Provides base repository settings files that fits Tevux Technologies style.</Description>
-    <Copyright>© 2022 Tevux Technologies</Copyright>
-    <PackageTags>csharp;editorconfig;codestyle</PackageTags>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <IncludeBuiltProjectOutputGroup>false</IncludeBuiltProjectOutputGroup>
   </PropertyGroup>
