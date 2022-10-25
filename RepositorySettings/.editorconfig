@@ -1,4 +1,4 @@
-# devbotas settings 2.1
+# devbotas settings 2.2
 
 root = true
 file_header_template = unset
@@ -26,7 +26,7 @@ insert_final_newline = true
 csharp_indent_block_contents = true
 csharp_indent_braces = false
 csharp_indent_case_contents = true
-csharp_indent_case_contents_when_block = true
+csharp_indent_case_contents_when_block = false
 csharp_indent_switch_labels = true
 csharp_indent_labels = one_less_than_current
 
