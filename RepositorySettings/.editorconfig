@@ -1,4 +1,4 @@
-# devbotas settings 2.4
+# devbotas settings 2.5
 
 root = true
 file_header_template = unset
@@ -289,6 +289,8 @@ dotnet_naming_style._camelcase.capitalization = camel_case
 #################################
 dotnet_diagnostic.CA1305.severity = none
 dotnet_diagnostic.CA1307.severity = none
+dotnet_diagnostic.CA1848.severity = none
+dotnet_diagnostic.CA2254.severity = none
 
 ####################################################################################################
 ####################################### Deprecated?.. ##############################################
