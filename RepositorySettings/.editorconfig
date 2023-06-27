@@ -1,4 +1,4 @@
-# devbotas settings 2.1
+# devbotas settings 2.5
 
 root = true
 file_header_template = unset
@@ -26,7 +26,7 @@ insert_final_newline = true
 csharp_indent_block_contents = true
 csharp_indent_braces = false
 csharp_indent_case_contents = true
-csharp_indent_case_contents_when_block = true
+csharp_indent_case_contents_when_block = false
 csharp_indent_switch_labels = true
 csharp_indent_labels = one_less_than_current
 
@@ -35,7 +35,7 @@ csharp_new_line_before_open_brace = none # Note: this line overrides a bunch of 
 csharp_new_line_before_catch = false
 csharp_new_line_before_else = false
 csharp_new_line_before_finally = false
-csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_object_initializers = false # Note: false should enforce single-line, but it actually does not (as of 2022-10). 'false' essentially does nothing now.
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 
@@ -142,6 +142,8 @@ csharp_style_var_elsewhere = true:warning
 ########## ReSharper ############
 #################################
 resharper_csharp_wrap_lines = false
+resharper_blank_lines_around_property = 0
+resharper_keep_existing_attribute_arrangement = true
 
 ####################################################################################################
 ####################################### .NET general style #########################################
@@ -286,6 +288,9 @@ dotnet_naming_style._camelcase.capitalization = camel_case
 ########## Analyzers ############
 #################################
 dotnet_diagnostic.CA1305.severity = none
+dotnet_diagnostic.CA1307.severity = none
+dotnet_diagnostic.CA1848.severity = none
+dotnet_diagnostic.CA2254.severity = none
 
 ####################################################################################################
 ####################################### Deprecated?.. ##############################################
