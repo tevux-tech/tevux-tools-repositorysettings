@@ -278,3 +278,4 @@ CodeDB
 # Nuke Build
 Build/output/*
 .nuke/*
+[Oo]utput/*
