@@ -284,6 +284,9 @@ dotnet_naming_style._camelcase.required_suffix =
 dotnet_naming_style._camelcase.word_separator = 
 dotnet_naming_style._camelcase.capitalization = camel_case
 
+# Misc
+dotnet_style_namespace_match_folder.severity = none
+
 #################################
 ########## Analyzers ############
 #################################
