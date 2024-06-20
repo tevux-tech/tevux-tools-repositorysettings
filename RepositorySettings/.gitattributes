@@ -35,6 +35,7 @@
 *.vgdbsettings eol=crlf
 *.props eol=crlf
 *.filters eol=crlf
+*.DotSettings eol=crlf
 
 # Documentation
 *.csv eol=crlf
@@ -53,3 +54,12 @@ Dockerfile-* eol=crlf
    
 # LC stuff
 *.regdefs eol=crlf
+
+# Avalonia
+*.axaml eol=crlf
+
+# . files
+.editorconfig eol=crlf
+.gitattributes eol=crlf
+.gitignore eol=crlf
+.XamlStyler eol=crlf
