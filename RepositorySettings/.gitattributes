@@ -1,3 +1,5 @@
+# devbotas gitattributes 1.0
+
 # C# 
 *.cs eol=crlf
 *.xaml.cs eol=crlf
