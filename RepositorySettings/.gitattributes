@@ -63,3 +63,8 @@ Dockerfile-* eol=crlf
 .gitattributes eol=crlf
 .gitignore eol=crlf
 .XamlStyler eol=crlf
+
+# shell
+*.sh eol=crlf
+*.cmd eol=crlf
+*.bat eol=crlf
