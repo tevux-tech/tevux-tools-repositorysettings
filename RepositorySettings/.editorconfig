@@ -1,7 +1,6 @@
 # devbotas settings 2.6
 
 root = true
-file_header_template = unset
 
 [*.csproj]
 # Indentation and spacing
