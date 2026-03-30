@@ -8,3 +8,10 @@ There are several important caveats related to the usage of this NuGet.
 2. Files are copied before each build, so you need to at least try building the project for the settings file to appear.
 3. Files are restored on every build, so do not modify them or the changes will be lost immediatelly. If you need to add some very project-specific settings (like, for example, custom ignored file types for Nuke Build System), create local `.editorconfig`, `.gitattributes` or `.gitignore` file. *These files stack up*, so you can override or append settings on per-project basis, if needed.
 
+# Building on Linux
+
+NuGet CLI requires Mono to run. If it complains "Cannot find 'mono' using '/usr/bin/which'", then install:
+
+```
+sudo apt install mono-devel
+```
